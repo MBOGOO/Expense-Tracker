@@ -65,4 +65,9 @@ class Dashboard extends Component
             'transactions' => $transactions,
         ]);
     }
+
+    public function layout()
+    {
+        return 'components.layouts.minimal';
+    }
 }
