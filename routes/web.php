@@ -10,7 +10,10 @@ use App\Livewire\Reports;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    if (auth()->check()) {
+        return redirect()->route('dashboard');
+    }
+    return view('landing');
 })->name('home');
 
 Route::middleware(['auth'])->group(function () {
