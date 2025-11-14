@@ -23,7 +23,7 @@
             
             {{-- Left Column: Add Transaction Form --}}
             <div class="lg:col-span-1">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden sticky top-6">
+                <div class="bg-white/95 rounded-xl shadow-md overflow-hidden sticky top-6">
                     <div class="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4">
                         <h2 class="text-xl font-bold text-white flex items-center">
                             <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

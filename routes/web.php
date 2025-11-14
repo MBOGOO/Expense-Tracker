@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 use Livewire\Volt\Volt;
 use App\Livewire\Dashboard;
+use App\Livewire\Transactions;
+use App\Livewire\Categories;
+use App\Livewire\Reports;
 
 
 Route::get('/', function () {
@@ -12,6 +15,12 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    Route::get('/transactions', \App\Livewire\Transactions::class)->name('transactions');
+    Route::get('/categories', \App\Livewire\Categories::class)->name('categories');
+    Route::get('/reports', \App\Livewire\Reports::class)->name('reports');
+});
 });
 
 Route::middleware(['auth'])->group(function () {
